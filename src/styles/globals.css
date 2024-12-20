@@ -1,0 +1,336 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url('../assests/images/back.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/* Login page container */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.login-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 80%;
+  width: 80%;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #6a11cb;
+  box-shadow: 0px 0px 4px rgba(106, 17, 203, 0.5);
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: rgb(176, 153, 27);
+  transform: scale(1.05);
+}
+
+/* Image section */
+.lock-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the space proportionally */
+}
+
+.login-container {
+  position: relative;
+  z-index: 2;
+}
+
+.homepage-card {
+  width: 80%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.homepage-card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  width: 70%;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  margin: 10px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* User Card Styling */
+.ucard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.2s ease-in-out;
+  height: 550px; /* Fixed height for all cards */
+  max-width: 100%;
+}
+
+.ucard:hover {
+  transform: scale(1.03); /* Subtle scaling on hover */
+}
+
+.ucard-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ucard-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+
+.ucard-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.ucard-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* Keeps image proportional */
+  border-radius: 8px;
+}
+
+.ucard form input {
+  position:relative;
+  top:10px;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.row {
+  zoom: 0.5;
+}
+
+.btn-secondary {
+  position: relative;
+  right: 10px;
+}
+
+/* Back Button */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.1rem;
+  z-index: 100;
+  width: 120px;
+  background-color: rgba(153, 25, 25, 0.848);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 768px (Tablets and below) */
+@media (max-width: 768px) {
+  .login-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    height: 90%;
+    width: 90%;
+  }
+
+  .login-title {
+    font-size: 2rem;
+  }
+
+  .form-section {
+    padding: 30px;
+  }
+
+  .homepage-card {
+    width: 90%;
+  }
+
+  .ucard {
+    height: auto; /* Allow user cards to adjust height */
+  }
+
+  .ucard-title {
+    font-size: 1.1rem;
+  }
+
+  .ucard-img-top {
+    height: 150px;
+  }
+
+  .btn {
+    width: 80%; /* Increase button width on mobile */
+  }
+
+  .pagination button {
+    font-size: 0.9rem;
+  }
+
+  .back-btn {
+    font-size: 1rem;
+    width: 100px;
+  }
+}
+
+/* For screens smaller than 480px (Mobile devices) */
+@media (max-width: 480px) {
+  .login-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    height: 100%;
+    width: 100%;
+  }
+
+  .login-title {
+    font-size: 1.8rem;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .homepage-card {
+    width: 100%;
+  }
+
+  .ucard {
+    padding: 10px;
+  }
+
+  .ucard-title {
+    font-size: 1rem;
+  }
+
+  .ucard-img-top {
+    height: 120px;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  .pagination button {
+    font-size: 0.8rem;
+  }
+
+  .back-btn {
+    font-size: 0.9rem;
+    width: 90px;
+  }
+}
